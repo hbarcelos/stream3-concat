@@ -44,9 +44,9 @@ myConcat.add(stream2)
 myConcat = new Concat([stream1, stream2])
 //...
 myConcat.remove(stream1)
+```
 
 **Notice**: this method **might** trigger the `end` event on the stream if the stream being removed is the last one.
-```
 
 ### Clearing streams
 
