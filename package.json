@@ -1,6 +1,6 @@
 {
   "name": "stream3-concat",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Dead simple stream concatenator for node stream 3 API",
   "main": "index.js",
   "scripts": {
