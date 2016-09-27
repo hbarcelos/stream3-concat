@@ -1,0 +1,22 @@
+{
+  "name": "stream3-concat",
+  "version": "0.1.0",
+  "description": "Dead simple stream concatenator for node stream 3 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hbarcelos/stream3-concat.git"
+  },
+  "keywords": [
+    "stream"
+  ],
+  "author": "Henrique Barcelos <rick.hjpbarcelos@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/hbarcelos/stream3-concat/issues"
+  },
+  "homepage": "https://github.com/hbarcelos/stream3-concat#readme"
+}
