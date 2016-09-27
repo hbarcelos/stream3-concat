@@ -129,15 +129,24 @@ Concat.prototype.clear = function () {
   /**
    * Closes the concat stream so no more events will be emitted.
    *
+   * @param {bool} closeSources If true, all underlying stream sources will be closed whenever possible
    * @return {Concat} this
    */
-Concat.prototype.close = function () {
+Concat.prototype.close = function (closeSources) {
   if (this._closed) {
     return
   }
 
-  this._closed = true
+  if (closeSources === true) {
+    this._sources.forEach(source => {
+      if (typeof source.close === 'function') {
+        source.close()
+      }
+    })
+  }
+
   this.clear()
+  this._closed = true
 
   setImmediate(() => {
     // Must pause before emitting the `close` event

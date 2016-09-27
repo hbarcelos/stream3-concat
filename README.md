@@ -68,7 +68,15 @@ myConcat = new Concat([stream1, stream2])
 myConcat.close()
 ```
 
-**Notice**: this method **will** trigger the `end` and the `close` events on the stream. Once a stream is closed, it can't be used anymore.
+**Notice**: this method **will** trigger the `end` and the `close` events on the concat stream. Once a stream is closed, it can't be used anymore. 
+
+If `true` is passed as the first parameter, any of the underlying streams that has a `close()` method will be closed as well.
+
+```javascript
+myConcat = new Concat([stream1, stream2])
+//...
+myConcat.close(true)
+```
 
 ### Methods are chainable
 ```javascript
